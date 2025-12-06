@@ -1,4 +1,4 @@
-📊 Project Overview
+📊 --Project Overview
 
 This project analyses customer behaviour, identifies trends, segments customers, and uncovers insights that help businesses improve sales, marketing, and retention.
 
@@ -16,7 +16,9 @@ The workflow includes:
 
 This is an ideal project for Data Analyst roles across retail, marketing, and e-commerce domains.
 
+
 🧠 Business Problem
+
 
 Most businesses collect customer data but cannot answer critical questions:
 
@@ -32,7 +34,9 @@ What factors drive repeat purchases?
 
 This project solves these business challenges through structured analytics.
 
+
 🛠 Tools Used
+
 
 🐍 Python – Data cleaning & EDA
 
@@ -48,6 +52,7 @@ This project solves these business challenges through structured analytics.
 
 Tasks performed:
 
+
 Removed duplicates
 
 Standardized text formats (email, names)
@@ -60,13 +65,9 @@ Handled missing values
 
 Created new columns like Total_Spend, Recency, Frequency
 
-Sample Code:
-
-df['Customer_Name'] = df['Customer_Name'].str.strip().str.title()
-df['Email'] = df['Email'].str.lower()
-df['Amount'] = df['Amount'].replace('[^0-9.]','', regex=True).astype(float)
 
 🧮 SQL Analysis (MySQL)
+
 
 Key business questions answered:
 
@@ -92,7 +93,9 @@ GROUP BY CustomerID
 ORDER BY Total_Revenue DESC
 LIMIT 10;
 
+
 📊 Dashboard (Power BI)
+
 
 Dashboard Includes:
 
@@ -112,7 +115,9 @@ Key KPIs (Total Revenue, Avg Order Value, Total Orders)
 
 This makes insights easy to understand for business stakeholders.
 
+
 📌 Insights
+
 
 Major insights from the analysis:
 
@@ -126,7 +131,9 @@ The South region has high volume but low AOV (needs marketing optimization).
 
 Q3 is the strongest quarter for revenue growth.
 
+
 🎯 Business Recommendations
+
 
 Based on insights:
 
@@ -149,6 +156,7 @@ Especially electronics and fashion.
 5️⃣ Increase marketing spend during Q2–Q3
 
 Peak revenue periods.
+
 
 📂 Folder Structure
 customer-behaviour-analysis/
