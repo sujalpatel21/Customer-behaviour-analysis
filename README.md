@@ -1,88 +1,75 @@
-📊 --Project Overview
+# 👨🏻‍💻Customer Behavior Data Analyst Portfolio Project
+This project represents a complete, industry standard, end-to-end data analytics workflow, designed to mirror the real responsibilities of professional analysts in modern business environments. The project encompasses all critical stages of data analysis, from data preparation and modeling to insight generation, visualization, and reporting.
 
-This project analyses customer behaviour, identifies trends, segments customers, and uncovers insights that help businesses improve sales, marketing, and retention.
+## 🧠 Project Overview
+This project provides a complete end-to-end customer behaviour analysis, from data cleaning to SQL insights and a Power BI dashboard.  
+It is designed to demonstrate real-world **Data Analyst** skills required in marketing, retail, and e-commerce analytics.
 
 The workflow includes:
 
-🧹 Data Cleaning (Python)
+- 🧹 Data Cleaning (Python)  
+- 🧮 SQL Querying (MySQL)  
+- 📊 Power BI Dashboard  
+- 📌 Customer Insights  
+- 🎯 Business Recommendations  
 
-🧮 SQL Analysis (MySQL)
+---
 
-📊 Dashboarding (Power BI)
+## 🎯 Business Problem
+Businesses need answers to key questions such as:
 
-📌 Insights & Business Recommendations
+- Which customers contribute the most revenue?  
+- What products or regions perform best?  
+- What factors drive repeat purchases?  
+- Which segment needs targeted marketing?  
 
-📈 KPIs and Trends Analysis
+This project solves these business challenges by analyzing customer patterns and extracting insights.
 
-This is an ideal project for Data Analyst roles across retail, marketing, and e-commerce domains.
+---
 
+## 🛠 Tools Used
 
-🧠 Business Problem
+- Python (Pandas, NumPy, Seaborn, Matplotlib)  
+- MySQL for SQL querying  
+- Power BI for dashboarding  
+- Excel/CSV for dataset handling  
 
+---
 
-Most businesses collect customer data but cannot answer critical questions:
+## 🧹 Data Cleaning (Python)
 
-Which customers contribute most to revenue?
+Performed the following transformations:
 
-What product categories perform best?
+- Removed duplicates  
+- Standardized text formats  
+- Cleaned numeric fields  
+- Converted date formats  
+- Handled missing data  
+- Created new calculated metrics (Recency, Frequency, Monetary)
 
-Which regions underperform and why?
+**Sample Code:**
 
-Which age group or segment buys the most?
+```python
+df['Customer_Name'] = df['Customer_Name'].str.strip().str.title()
+df['Email'] = df['Email'].str.lower()
+df['Amount'] = df['Amount'].replace('[^0-9.]','', regex=True).astype(float)
+```
 
-What factors drive repeat purchases?
+---
 
-This project solves these business challenges through structured analytics.
+## 🧮 SQL Analysis (MySQL)
 
+Key questions answered:
 
-🛠 Tools Used
+- Who are the highest-spending customers?  
+- Which regions generate the most revenue?  
+- What are the monthly sales trends?  
+- Which product categories perform best?  
+- What is the average order value?
 
+**Sample Query:**
 
-🐍 Python – Data cleaning & EDA
-
-🗄️ MySQL – Querying & business insights
-
-📊 Power BI – Dashboard & storytelling
-
-📁 Excel/CSV – Raw dataset handling
-
-🧹 Pandas, NumPy, Seaborn, Matplotlib
-
-🧹 Data Cleaning (Python)
-
-Tasks performed:
-
-
-Removed duplicates
-
-Standardized text formats (email, names)
-
-Cleaned numeric fields
-
-Converted dates
-
-Handled missing values
-
-Created new columns like Total_Spend, Recency, Frequency
-
-
-🧮 SQL Analysis (MySQL)
-
-
-Key business questions answered:
-
-Who are the top 10 highest-spending customers?
-
-What is the average order value across segments?
-
-Which regions generate the highest revenue?
-
-What category sells the most?
-
-What are monthly sales trends?
-
-Example Query:
-
+```sql
 SELECT 
     CustomerID,
     COUNT(OrderID) AS Total_Orders,
@@ -92,126 +79,99 @@ FROM sales_data
 GROUP BY CustomerID
 ORDER BY Total_Revenue DESC
 LIMIT 10;
+```
 
+---
 
-📊 Dashboard (Power BI)
+## 📊 Power BI Dashboard
 
+The interactive dashboard includes:
 
-Dashboard Includes:
+- Key KPIs (Total Revenue, AOV, Orders)  
+- Revenue trend over time  
+- Customer segmentation  
+- Regional performance  
+- Top products  
+- Age group analysis  
 
-📈 Revenue Trends
+This dashboard transforms analysis into actionable business intelligence.
 
-📌 Customer Segmentation
+---
 
-🛒 Product Category Performance
+## 📌 Insights
 
-🌍 Regional Analysis
+- Top 20% customers generate nearly 60% of total revenue.  
+- Age group **25–35** shows the highest repeat purchase rate.  
+- Electronics is the highest revenue category.  
+- South region has high orders but low AOV (needs marketing focus).  
+- Q3 shows peak sales performance.
 
-🧍 Age Group Analysis
+---
 
-💰 Top Customers by Revenue
+## 💡 Business Recommendations
 
-Key KPIs (Total Revenue, Avg Order Value, Total Orders)
+1. Launch loyalty programs for repeat high-value customers.  
+2. Run personalized campaigns for 25–35 age segment.  
+3. Offer bundles in regions with low AOV.  
+4. Improve stock levels for high-demand categories like Electronics.  
+5. Increase marketing spend during Q2–Q3 (strong revenue quarters).
 
-This makes insights easy to understand for business stakeholders.
+---
 
+## 📂 Folder Structure
 
-📌 Insights
-
-
-Major insights from the analysis:
-
-20% of customers contributed ~60% of total revenue.
-
-Age group 25–35 shows the highest repeat purchases.
-
-Electronics is the highest revenue-generating product category.
-
-The South region has high volume but low AOV (needs marketing optimization).
-
-Q3 is the strongest quarter for revenue growth.
-
-
-🎯 Business Recommendations
-
-
-Based on insights:
-
-1️⃣ Launch a loyalty program for top customers
-
-These customers drive most revenue and are easier to retain.
-
-2️⃣ Improve marketing focus in low-performing regions
-
-Bundle offers and discounts can increase AOV.
-
-3️⃣ Target age group 25–35 with tailored campaigns
-
-They have the highest repeat purchase rate.
-
-4️⃣ Improve stock availability for high-demand categories
-
-Especially electronics and fashion.
-
-5️⃣ Increase marketing spend during Q2–Q3
-
-Peak revenue periods.
-
-
-📂 Folder Structure
+```
 customer-behaviour-analysis/
 │
-├── data/                 # Raw & cleaned datasets
-├── notebooks/            # Python notebooks
+├── data/                 # Raw & cleaned data files
+├── notebooks/            # Python notebooks for EDA
 ├── sql/                  # MySQL queries
 ├── dashboard/            # Power BI .pbix file
 ├── images/               # Dashboard screenshots
 └── README.md             # Project documentation
+```
 
-🔧 How to Run This Project
-1. Clone the Repository
+---
+
+## 🔧 How to Run This Project
+
+### 1. Clone the Repository
+```
 git clone https://github.com/sujalpatel21/Customer-behaviour-analysis
+```
 
-2. Open Python Notebook
+### 2. Run Python Notebook
+- Open `.ipynb` file  
+- Perform cleaning & EDA  
 
-Run data cleaning & EDA
+### 3. Load Data into MySQL
+- Create database  
+- Import CSV/data  
+- Execute queries from `/sql` folder  
 
-Export cleaned dataset
+### 4. Open Dashboard in Power BI
+- Load cleaned dataset  
+- Refresh visuals  
 
-3. Load Data into MySQL
+---
 
-Create a database
+## 🚀 Conclusion
+This project demonstrates your ability to work across:
 
-Import the cleaned dataset
+- Data cleaning  
+- SQL analytics  
+- Dashboard creation  
+- Business storytelling  
+- Insight-based decision making  
 
-Run queries from /sql folder
+It represents a complete **Data Analyst portfolio project**, suitable for resumes, GitHub, and interview demonstrations.
 
-4. Open Power BI Dashboard
+---
 
-Load SQL or CSV
+## 📬 Contact
 
-Refresh visuals
-
-🚀 Conclusion
-
-This project demonstrates your ability to:
-
-Clean real-world data
-
-Run SQL queries for business insights
-
-Build professional dashboards
-
-Convert analysis into business recommendations
-
-It showcases complete data analytics workflow, making it ideal for Data Analyst job applications.
-
-📬 Contact
-
-Sujal Patel
-📍 Ahmedabad, India
-📧 sujalpatel6172@gmail.com
-
-🔗 GitHub: https://github.com/sujalpatel21
-
-🔗 LinkedIn: https://linkedin.com/in/sujalpatel21
+**Sujal Patel**  
+Ahmedabad, India  
+Email: sujalpatel6172@gmail.com  
+GitHub: https://github.com/sujalpatel21  
+LinkedIn: https://linkedin.com/in/sujalpatel21  
