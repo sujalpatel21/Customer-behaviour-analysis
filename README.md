@@ -1,87 +1,87 @@
-📊 Customer Behaviour Analysis – End-to-End Data Analytics Project
+📊 Project Overview
 
-Tools Used: MySQL, Python (Pandas/Matplotlib/Seaborn), Power BI, Excel
-Focus: Customer behaviour trends, sales insights, segmentation, business recommendations
+This project analyses customer behaviour, identifies trends, segments customers, and uncovers insights that help businesses improve sales, marketing, and retention.
 
-🧠 1. Project Overview
+The workflow includes:
 
-This project is an end-to-end customer behaviour analysis designed to help businesses understand how customers interact with their products, what drives sales, and which customer segments are most valuable.
-The analysis covers the full analytics pipeline:
-Data understanding
-Data cleaning & transformation
-Exploratory data analysis (EDA)
-SQL querying for insights
-Visualization in Power BI
-Business insights & actionable recommendations
+🧹 Data Cleaning (Python)
 
-This project demonstrates real-world data analyst capabilities, including analytical thinking, BI dashboarding, SQL expertise, and storytelling.
+🧮 SQL Analysis (MySQL)
 
-🎯 2. Business Problem
+📊 Dashboarding (Power BI)
 
-Companies often have large datasets but struggle to answer key questions:
-Which customer segment contributes the most revenue?
-What patterns exist in customer purchases?
-What factors influence high-value customers?
-How does customer behaviour change over time?
-Which products/regions need business attention?
+📌 Insights & Business Recommendations
 
-This project solves these questions using data-driven exploration and modelling.
+📈 KPIs and Trends Analysis
 
-🛠️ 3. Tech Stack & Skills Demonstrated
-🔹 Database (MySQL)
+This is an ideal project for Data Analyst roles across retail, marketing, and e-commerce domains.
 
-SQL queries for filtering, grouping, aggregations
-Joins across customer, transaction, and product tables
-Creating analytical datasets from raw transactional data
+🧠 Business Problem
 
-🔹 Python
+Most businesses collect customer data but cannot answer critical questions:
 
-Data cleaning (missing values, duplicates, formatting)
-Feature creation (RFM scores, segmentation fields)
-Exploratory visualizations (histograms, heatmaps, distribution analysis)
+Which customers contribute most to revenue?
 
-🔹 Power BI
+What product categories perform best?
 
-Interactive dashboard creation
-KPI cards, trend lines, and heatmaps
-Customer segmentation visuals
-Drill-through reports
+Which regions underperform and why?
 
-🔹 Data Analytics Skills
+Which age group or segment buys the most?
 
-EDA (Exploratory Data Analysis)
-Segmentation
-Business storytelling
-Insight generation
-Reporting & dashboarding
+What factors drive repeat purchases?
 
-🧹 4. Data Cleaning & Transformation (Python)
+This project solves these business challenges through structured analytics.
 
-Key cleaning steps included:
-Removing duplicates and null records
-Converting inconsistent date formats
-Standardizing categorical values
-Creating calculated fields
-Total Spend
-Purchase Frequency
-Recency (days since last purchase)
+🛠 Tools Used
 
-Example transformation:
+🐍 Python – Data cleaning & EDA
+
+🗄️ MySQL – Querying & business insights
+
+📊 Power BI – Dashboard & storytelling
+
+📁 Excel/CSV – Raw dataset handling
+
+🧹 Pandas, NumPy, Seaborn, Matplotlib
+
+🧹 Data Cleaning (Python)
+
+Tasks performed:
+
+Removed duplicates
+
+Standardized text formats (email, names)
+
+Cleaned numeric fields
+
+Converted dates
+
+Handled missing values
+
+Created new columns like Total_Spend, Recency, Frequency
+
+Sample Code:
+
 df['Customer_Name'] = df['Customer_Name'].str.strip().str.title()
 df['Email'] = df['Email'].str.lower()
 df['Amount'] = df['Amount'].replace('[^0-9.]','', regex=True).astype(float)
 
-🧮 5. SQL Analysis (MySQL)
+🧮 SQL Analysis (MySQL)
 
-A dedicated MySQL database was created to perform analytical queries.
-Example Questions Answered Using SQL:
-Who are our top-spending customers?
-What is the average order value by customer segment?
-Which product categories sell the most?
-How does purchase frequency vary across regions?
-Which time period generates highest revenue?
+Key business questions answered:
 
-Sample SQL Query:
+Who are the top 10 highest-spending customers?
+
+What is the average order value across segments?
+
+Which regions generate the highest revenue?
+
+What category sells the most?
+
+What are monthly sales trends?
+
+Example Query:
+
 SELECT 
     CustomerID,
     COUNT(OrderID) AS Total_Orders,
@@ -92,81 +92,111 @@ GROUP BY CustomerID
 ORDER BY Total_Revenue DESC
 LIMIT 10;
 
-📈 6. Exploratory Data Analysis (EDA)
+📊 Dashboard (Power BI)
 
-Visual patterns were discovered using Python:
-Distribution of customer spending
-Frequency of purchases
-Outlier detection
+Dashboard Includes:
 
-These insights helped identify key behaviour traits of loyal and high-value customers.
+📈 Revenue Trends
 
-📊 7. Power BI Dashboard
+📌 Customer Segmentation
 
-A professional interactive dashboard was created with:
-KPIs: Total Revenue, Avg Purchase, Retention Metrics
-Customer Segmentation Charts
-Purchase Frequency Visuals
-Top Products & Regions
-Trend Analysis Over Months
-The dashboard turns raw data into actionable business intelligence.
+🛒 Product Category Performance
 
-🧠 8. Key Insights
+🌍 Regional Analysis
 
-Some major insights discovered (example):
+🧍 Age Group Analysis
 
-🏆 20% of customers contributed nearly 60% of total revenue.
-📅 Highest purchasing activity observed in Q3.
-🎯 Customers aged 25–35 showed highest repeat purchase rate.
-🛒 Product category Electronics had strongest CLV (Customer Lifetime Value).
-🌍 Region South Zone showed high volume but lower AOV — opportunity for marketing optimization.
-💡 9. Business Recommendations
+💰 Top Customers by Revenue
 
-Based on the insights:
+Key KPIs (Total Revenue, Avg Order Value, Total Orders)
 
-1. Loyalty Program for High-Value Customers
-Since a small segment contributes majority revenue, targeted offers will boost retention.
-2. Personalized Marketing Campaigns
-Based on behaviour segments (frequency, spend, region).
-3. Promotions in Low-AOV Regions
-Incentives or bundles can increase average order value.
-4. Stock Optimization for High-Demand Categories
-Electronics and Lifestyle categories performed exceptionally well → stocking strategy needed.
-5. Increase Marketing Spend in Q2–Q3
-Historically the strongest months for revenue.
+This makes insights easy to understand for business stakeholders.
 
-🔍 10. Folder Structure
+📌 Insights
+
+Major insights from the analysis:
+
+20% of customers contributed ~60% of total revenue.
+
+Age group 25–35 shows the highest repeat purchases.
+
+Electronics is the highest revenue-generating product category.
+
+The South region has high volume but low AOV (needs marketing optimization).
+
+Q3 is the strongest quarter for revenue growth.
+
+🎯 Business Recommendations
+
+Based on insights:
+
+1️⃣ Launch a loyalty program for top customers
+
+These customers drive most revenue and are easier to retain.
+
+2️⃣ Improve marketing focus in low-performing regions
+
+Bundle offers and discounts can increase AOV.
+
+3️⃣ Target age group 25–35 with tailored campaigns
+
+They have the highest repeat purchase rate.
+
+4️⃣ Improve stock availability for high-demand categories
+
+Especially electronics and fashion.
+
+5️⃣ Increase marketing spend during Q2–Q3
+
+Peak revenue periods.
+
+📂 Folder Structure
 customer-behaviour-analysis/
 │
 ├── data/                 # Raw & cleaned datasets
-├── notebooks/            # Python EDA
+├── notebooks/            # Python notebooks
 ├── sql/                  # MySQL queries
-├── dashboard/            # Power BI dashboard (.pbix)
+├── dashboard/            # Power BI .pbix file
 ├── images/               # Dashboard screenshots
-└── README.md             # Documentation
+└── README.md             # Project documentation
 
-📦 11. How to Run This Project
-▶ Step 1 — Clone Repository
+🔧 How to Run This Project
+1. Clone the Repository
 git clone https://github.com/sujalpatel21/Customer-behaviour-analysis
-▶ Step 2 — Install Dependencies
-pip install -r requirements.txt
-▶ Step 3 — Run Notebook
-Open Jupyter Notebook:
-jupyter notebook
-▶ Step 4 — Import SQL File
-Use MySQL Workbench or Command Line to run all .sql files.
-▶ Step 5 — Open Power BI Dashboard
-Open .pbix file from dashboard/ folder. 
 
-🏁 12. Conclusion
-This project demonstrates how customer behaviour insights can help businesses:
-Increase revenue
-Improve customer retention
-Optimize product strategy
-Target the right customer segments
+2. Open Python Notebook
 
-It showcases full data-analyst capability:
-SQL → Python → Visualization → Insights → Business Value.
+Run data cleaning & EDA
+
+Export cleaned dataset
+
+3. Load Data into MySQL
+
+Create a database
+
+Import the cleaned dataset
+
+Run queries from /sql folder
+
+4. Open Power BI Dashboard
+
+Load SQL or CSV
+
+Refresh visuals
+
+🚀 Conclusion
+
+This project demonstrates your ability to:
+
+Clean real-world data
+
+Run SQL queries for business insights
+
+Build professional dashboards
+
+Convert analysis into business recommendations
+
+It showcases complete data analytics workflow, making it ideal for Data Analyst job applications.
 
 📬 Contact
 
@@ -175,4 +205,5 @@ Sujal Patel
 📧 sujalpatel6172@gmail.com
 
 🔗 GitHub: https://github.com/sujalpatel21
+
 🔗 LinkedIn: https://linkedin.com/in/sujalpatel21
